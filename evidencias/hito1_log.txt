@@ -1,0 +1,72 @@
+
+1s
+Current runner version: '2.334.0'
+Runner Image Provisioner
+Operating System
+Runner Image
+GITHUB_TOKEN Permissions
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Complete job name: build-and-test
+1s
+Run actions/checkout@v4
+Syncing repository: EnriDv/legacy-users
+Getting Git version info
+Temporarily overriding HOME='/home/runner/work/_temp/5f8fe476-feab-4e17-96c2-92ed13755c0e' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/legacy-users/legacy-users
+Deleting the contents of '/home/runner/work/legacy-users/legacy-users'
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+/usr/bin/git sparse-checkout disable
+/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Checking out the ref
+/usr/bin/git log -1 --format=%H
+cb8300affe43021de53b8d26001416b1e4e0cd6b
+0s
+Run actions/setup-node@v4
+Found in cache @ /opt/hostedtoolcache/node/20.20.2/x64
+Environment details
+3s
+Run npm install
+
+added 68 packages, and audited 69 packages in 3s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+0s
+Run npm test
+
+> legacy-users@1.0.0 test
+> node test/app.test.js
+
+=== Ejecutando Pruebas Unitarias de Seguridad de Usuarios ===
+✅ PASSED: Políticas de complejidad de contraseñas aprobadas.
+0s
+Post job cleanup.
+1s
+Post job cleanup.
+/usr/bin/git version
+git version 2.54.0
+Temporarily overriding HOME='/home/runner/work/_temp/85ea1918-0b2b-45cc-a819-5f98e23dcda8' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/legacy-users/legacy-users
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+0s
+Cleaning up orphan processes

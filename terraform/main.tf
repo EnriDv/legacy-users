@@ -13,18 +13,22 @@ module "compute" {
   iam_instance_profile = var.iam_instance_profile
 
   user_data = <<-EOF
-              #!/bin/bash
-              dnf update -y
-              dnf install -y git nodejs
+  #!/bin/bash
 
-              cd /home/ec2-user
+  apt update -y
+  apt install -y git curl
 
-              git clone https://github.com/EnriDv/legacy-users.git
+  curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+  apt install -y nodejs
 
-              cd legacy-users
+  cd /home/ubuntu
 
-              npm install
+  git clone https://github.com/EnriDv/legacy-users.git
 
-              nohup npm start > app.log 2>&1 &
-              EOF
+  cd legacy-users
+
+  npm install
+
+  nohup npm start > app.log 2>&1 &
+  EOF
 }

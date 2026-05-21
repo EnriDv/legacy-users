@@ -5,6 +5,8 @@ resource "aws_instance" "app_server" {
 
   iam_instance_profile = var.iam_instance_profile
 
+  key_name = "legacy-users-key"
+
   user_data = var.user_data
 
   tags = {
